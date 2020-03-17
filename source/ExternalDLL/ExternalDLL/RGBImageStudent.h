@@ -6,7 +6,24 @@
 
 #pragma once
 #include "RGBImage.h"
+#include <array>
+
+struct studentRGB {
+
+	studentRGB(uint_fast8_t r = 0, uint_fast8_t g = 0, uint_fast8_t b = 0)
+		:r(r), g(g), b(b) {
+	}
+
+	uint_fast8_t b;
+	uint_fast8_t g;
+	uint_fast8_t r;
+};
+
 class RGBImageStudent : public RGBImage {
+private: 
+
+	std::array<studentRGB, 0> arraytje;
+
 public:
 
 	RGBImageStudent();

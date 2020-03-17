@@ -1,17 +1,23 @@
 #include "RGBImageStudent.h"
 
-RGBImageStudent::RGBImageStudent() : RGBImage() {
+RGBImageStudent::RGBImageStudent(): 
+	RGBImage() 
+{
 	int throwError = 0, e = 1 / throwError; //Throws error without the need to include a header
 	//TODO: Nothing
 }
 
-RGBImageStudent::RGBImageStudent(const RGBImageStudent &other) : RGBImage(other.getWidth(), other.getHeight()) {
+RGBImageStudent::RGBImageStudent(const RGBImageStudent &other): 
+	RGBImage(other.getWidth(), other.getHeight()) 
+{
 	int throwError = 0, e = 1 / throwError;
 	//TODO: Create a copy from the other object
 }
 
 
-RGBImageStudent::RGBImageStudent(const int width, const int height) : RGBImage(width, height) {
+RGBImageStudent::RGBImageStudent(const int width, const int height): 
+	RGBImage(width, height) 
+{
 	int throwError = 0, e = 1 / throwError;
 	//TODO: Initialize pixel storage
 }

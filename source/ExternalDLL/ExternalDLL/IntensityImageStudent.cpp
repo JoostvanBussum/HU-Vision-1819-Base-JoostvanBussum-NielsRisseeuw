@@ -5,12 +5,16 @@ IntensityImageStudent::IntensityImageStudent() : IntensityImage() {
 	//TODO: Nothing
 }
 
-IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other) : IntensityImage(other.getWidth(), other.getHeight()) {
+IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other): 
+	IntensityImage(other.getWidth(), other.getHeight()) 
+{
 	int throwError = 0, e = 1 / throwError;
 	//TODO: Create a copy from the other object
 }
 
-IntensityImageStudent::IntensityImageStudent(const int width, const int height) : IntensityImage(width, height) {
+IntensityImageStudent::IntensityImageStudent(const int width, const int height): 
+	IntensityImage(width, height) 
+{
 	int throwError = 0, e = 1 / throwError;
 	//TODO: Initialize pixel storage
 }
