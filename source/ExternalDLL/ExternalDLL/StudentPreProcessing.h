@@ -6,7 +6,17 @@
 
 #pragma once
 #include "PreProcessing.h"
+#include "IntensityImageStudent.h"
+
+
 class StudentPreProcessing : public PreProcessing {
+private:
+	enum method {desaturation, luminosity};
+	method currentMethod = method::desaturation;
+
+	unsigned char Max(const unsigned char &a, const unsigned char &b, const unsigned char &c) const;
+	unsigned char Min(const unsigned char &a, const unsigned char &b, const unsigned char &c) const;
+
 public:
 	IntensityImage * stepToIntensityImage(const RGBImage &image) const;
 	IntensityImage * stepScaleImage(const IntensityImage &image) const;
