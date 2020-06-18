@@ -8,9 +8,10 @@ IntensityImageStudent::IntensityImageStudent() : IntensityImage() {
 IntensityImageStudent::IntensityImageStudent(const IntensityImageStudent &other): 
 	IntensityImage(other.getWidth(), other.getHeight()) {
 
-	this->imagePointer = new Intensity[other.getWidth * other.getHeight];
-	for (unsigned int i = 0; i < other.getWidth * other.getHeight; i++) {
-		imagePointer[i] = other.getPixel[i];
+	this->imagePointer = new Intensity[other.getWidth() * other.getHeight()];
+	//this->imagePointer = ImageFactory::newIntensityImage(other.getWidth(), other.getHeight());
+	for (unsigned int i = 0; i < other.getWidth() * other.getHeight(); i++) {
+		this->imagePointer[i] = other.getPixel(i);
 
 	}
 	//TODO: Create a copy from the other object
@@ -25,14 +26,14 @@ IntensityImageStudent::IntensityImageStudent(const int width, const int height):
 
 IntensityImageStudent::~IntensityImageStudent() {
 
-	delete this->imagePointer;
+	delete[] this->imagePointer;
 	//TODO: delete allocated objects
 }
 
 void IntensityImageStudent::set(const int width, const int height) {
 	IntensityImage::set(width, height);
 
-	delete this->imagePointer;
+	delete[] this->imagePointer;
 	this->imagePointer = new Intensity[width * height];
 	//TODO: resize or create a new pixel storage (Don't forget to delete the old storage)
 }
@@ -40,11 +41,11 @@ void IntensityImageStudent::set(const int width, const int height) {
 void IntensityImageStudent::set(const IntensityImageStudent &other) {
 	IntensityImage::set(other.getWidth(), other.getHeight());
 
-	delete this->imagePointer;
-	this->imagePointer = new Intensity[other.getWidth * getHeight];
+	delete[] this->imagePointer;
+	this->imagePointer = new Intensity[other.getWidth() * other.getHeight()];
 
-	for (unsigned int i = 0; i < other.getWidth * other.getHeight; i++) {
-		imagePointer[i] = other.getPixel[i];
+	for (unsigned int i = 0; i < other.getWidth() * other.getHeight(); i++) {
+		this->imagePointer[i] = other.getPixel(i);
 	}
 	//TODO: resize or create a new pixel storage and copy the object (Don't forget to delete the old storage)
 }

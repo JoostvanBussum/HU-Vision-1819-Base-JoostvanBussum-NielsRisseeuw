@@ -6,7 +6,7 @@
 
 #pragma once
 #include "IntensityImage.h"
-
+#include "ImageFactory.h"
 
 class IntensityImageStudent : public IntensityImage {
 private:

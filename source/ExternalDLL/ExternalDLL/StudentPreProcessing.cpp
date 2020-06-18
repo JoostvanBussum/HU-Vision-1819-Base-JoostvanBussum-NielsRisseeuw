@@ -14,16 +14,18 @@ unsigned char StudentPreProcessing::Min(const unsigned char &a, const unsigned c
 IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &image) const {
 
 	// Intensity image aanmaken
-	IntensityImageStudent * tempIntensityImage;
-
-	tempIntensityImage->set(image.getWidth(), image.getHeight());
+	const int imageWidth = image.getWidth();
+	const int imageHeight = image.getHeight();
+	const int resolution = imageWidth * imageHeight;
+	IntensityImage * tempIntensityImage = ImageFactory::newIntensityImage(imageWidth, imageHeight);
 
 	switch (currentMethod)
 	{
 		case method::desaturation:
-			for (unsigned int i = 0; i < image.getWidth() * image.getHeight(); ++i) {
+			for (unsigned int i = 0; i < resolution; ++i) {
 
-				tempIntensityImage->setPixel(i, 
+				tempIntensityImage->setPixel(i,
+					// Gray =
 					(Max(image.getPixel(i).r, image.getPixel(i).g, image.getPixel(i).b) +
 					 Min(image.getPixel(i).r, image.getPixel(i).g, image.getPixel(i).b)) / 2
 				);
@@ -32,8 +34,12 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 			break;
 
 		case method::luminosity:
-			for (unsigned int i = 0; i < image.getWidth() * image.getHeight(); ++i) {
+			for (unsigned int i = 0; i < resolution; ++i) {
 
+				tempIntensityImage->setPixel(i,
+					// Gray =
+					(image.getPixel(i).r * 0.3) + (image.getPixel(i).g * 0.59) + (image.getPixel(i).b * 0.11)
+				);
 			}
 			break;
 

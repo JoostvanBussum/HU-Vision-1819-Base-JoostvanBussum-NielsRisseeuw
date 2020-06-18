@@ -7,6 +7,7 @@
 #pragma once
 #include "PreProcessing.h"
 #include "IntensityImageStudent.h"
+#include "ImageFactory.h"
 
 
 class StudentPreProcessing : public PreProcessing {
