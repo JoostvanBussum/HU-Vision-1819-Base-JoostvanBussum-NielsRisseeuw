@@ -140,4 +140,44 @@
       <double>3.4615384615384617</double>
     </Parameters>
   </name>
+  <name Name="child-1-ingescanned" ImagePath="TestSet Images\child-1-ingescanned.png">
+    <Parameters>
+      <double>1.8330190565960738</double>
+      <double>0.57169087512447392</double>
+      <double>0.71440324220428719</double>
+      <double>0</double>
+      <double>2.225951432694393</double>
+      <double>0.73937487243474775</double>
+      <double>0.32175055439664213</double>
+      <double>1.9647105101511968</double>
+      <double>0.46582353017471473</double>
+      <double>0.14348298668684045</double>
+      <double>0.46443327515845984</double>
+      <double>0.2625057642199991</double>
+      <double>0.20293463694140584</double>
+      <double>0.50481877734615188</double>
+      <double>1.6869340857355284</double>
+      <double>1.7692307692307689</double>
+    </Parameters>
+  </name>
+  <name Name="child-1-ingescanned" ImagePath="TestSet Images\child-1-ingescanned1.png">
+    <Parameters>
+      <double>1.8330190565960738</double>
+      <double>0.57169087512447392</double>
+      <double>0.71440324220428719</double>
+      <double>0</double>
+      <double>2.225951432694393</double>
+      <double>0.73937487243474775</double>
+      <double>0.32175055439664213</double>
+      <double>1.9647105101511968</double>
+      <double>0.46582353017471473</double>
+      <double>0.14348298668684045</double>
+      <double>0.46443327515845984</double>
+      <double>0.2625057642199991</double>
+      <double>0.20293463694140584</double>
+      <double>0.50481877734615188</double>
+      <double>1.6869340857355284</double>
+      <double>1.7692307692307689</double>
+    </Parameters>
+  </name>
 </TestSetFile>

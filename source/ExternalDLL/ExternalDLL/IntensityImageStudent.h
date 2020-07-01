@@ -10,7 +10,7 @@
 
 class IntensityImageStudent : public IntensityImage {
 private:
-	Intensity * imagePointer;
+	Intensity *imagePointer;
 
 public:
 	IntensityImageStudent();
